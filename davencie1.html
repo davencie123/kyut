@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haze</title>
+    <link rel="stylesheet" href="davencie1.css" />
+    <script src="davencie1.js"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form onsubmit="return validate();">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            placeholder="Enter Username"
+            id="username"
+            required
+          />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            placeholder="Enter Password"
+            id="password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <div class="remeber-forgot">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#" onclick="showRegisterForm()">Register</a>
+        </div>
+
+        <button type="button" id="LoginButton" class="btn" onclick="validate()">
+          Login
+        </button>
+
+        <div class="register-link">
+          Don't have an account?
+          <a href="#" onclick="showRegisterForm()">Register</a>
+        </div>
+      </form>
+
+      <!-- Registration Form -->
+      <form id="registrationForm" style="display: none">
+        <h1>Register</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            id="fullName"
+            required
+          />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter Email" id="email" required />
+          <i class="bx bxs-envelope"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            placeholder="Create Password"
+            id="registerPassword"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <button
+          type="button"
+          id="RegisterButton"
+          class="btn"
+          onclick="register()"
+        >
+          Register
+        </button>
+
+        <div class="register-link">
+          Already have an account?
+          <a href="#" onclick="showLoginForm()">Login</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
